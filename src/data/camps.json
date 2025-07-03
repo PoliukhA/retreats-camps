@@ -10,7 +10,7 @@
     "priceFrom": 2900,
     "currency": "PLN",
     "gender": "all",
-    "imageUrl": "",
+    "imageUrl": null,
     "organizer": "Pawel Haczkur",
     "link": "https://instagram.com/haczkur.polesport"
   },
@@ -25,7 +25,7 @@
     "priceFrom": 250,
     "currency": "EUR",
     "gender": "female",
-    "imageUrl": "",
+    "imageUrl": null,
     "organizer": "High Heels Studio",
     "link": "https://instagram.com/polestyle"
   },
@@ -40,7 +40,7 @@
     "priceFrom": 2600,
     "currency": "PLN",
     "gender": "female",
-    "imageUrl": "",
+    "imageUrl": null,
     "organizer": "Strechme Studio",
     "link": "https://instagram.com/polestyle"
   },
@@ -55,7 +55,7 @@
     "priceFrom": 19000,
     "currency": "UAH",
     "gender": "female",
-    "imageUrl": "",
+    "imageUrl": null,
     "organizer": "Inflow",
     "link": "https://instagram.com/strip.kitchen.camp"
   },
@@ -70,7 +70,7 @@
     "priceFrom": 1000,
     "currency": "UAH",
     "gender": "female",
-    "imageUrl": "",
+    "imageUrl": null,
     "organizer": "A2POLE",
     "link": "https://instagram.com/exoday_fullpass"
   },
@@ -85,7 +85,7 @@
     "priceFrom": 10300,
     "currency": "UAH",
     "gender": "female",
-    "imageUrl": "",
+    "imageUrl": null,
     "organizer": "Anna Bux",
     "link": "https://instagram.com/perezavantazhennya_karpaty"
   },
@@ -100,7 +100,7 @@
     "priceFrom": 1200,
     "currency": "EUR",
     "gender": "female",
-    "imageUrl": "",
+    "imageUrl": null,
     "organizer": "Strech Hall",
     "link": "https://instagram.com/strech_hall"
   }

@@ -1,53 +1,44 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
 import { Camp } from '@/types/camp';
-import { fetchUnsplashImage } from '@/utils/fetchUnsplashImage';
 
 type Props = {
   camp: Camp;
 };
 
 export default function CampCard({ camp }: Props) {
-  const [imageUrl, setImageUrl] = useState(camp.imageUrl);
-
-  useEffect(() => {
-    const loadImage = async () => {
-      if (!camp.imageUrl) {
-        const unsplashImage = await fetchUnsplashImage(camp.sport);
-        if (unsplashImage) {
-          setImageUrl(unsplashImage);
-        }
-      }
-    };
-    loadImage();
-  }, [camp.imageUrl, camp.sport]);
 
   return (
-    <div className="border rounded-xl p-4 shadow hover:shadow-lg transition">
+    <div className="font-secondary border border-light-lavender rounded-xl shadow hover:shadow-lg transition">
+      <div className='relative'>
+        <p className="absolute top-3 right-3 text-xs border-0 rounded-2xl bg-white p-1">
+          <b>From {camp.priceFrom} {camp.currency}</b>
+        </p>
+
       <Image
-        src={imageUrl}
+        src={camp.imageUrl || '/fallback.jpg'}
         alt={camp.title}
         width={400}
         height={250}
-        className="w-full h-48 object-cover rounded"
+        className="w-full h-48 object-cover rounded-t-xl"
       />
-      <h2 className="text-xl font-semibold mt-2">{camp.title}</h2>
-      <p className="text-sm text-gray-500">
-        {camp.country} {camp.city ? `· ${camp.city}` : ''} · {camp.sport}
-      </p>
-      <p className="mt-1 font-medium">
-        от {camp.priceFrom} {camp.currency}
-      </p>
-      <a
-        href={camp.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-block mt-2 text-blue-500 hover:underline"
-      >
-        Подробнее →
-      </a>
+      </div>
+      <div className='m-3'>
+        <h2 className="text-lg xs:text-base uppercase mt-2 mb-3">{camp.title}</h2>
+        <p className="text-sm text-gray-500">
+          <b>· Location:</b> {camp.country} {camp.city ? `| ${camp.city}` : ''}<br/>
+          <b>· Course:</b> {camp.sport}
+        </p>
+        <a
+          href={camp.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-2 hover:underline"
+        >
+          More about →
+        </a>
+      </div>
     </div>
   );
 }

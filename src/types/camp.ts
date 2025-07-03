@@ -9,7 +9,7 @@ export type Camp = {
   priceFrom: number; // minimal price
   currency: 'EUR' | 'PLN' | 'UAH';
   gender: 'female' | 'male' | 'all';
-  imageUrl: string;
+  imageUrl: string | null;
   organizer: string;
   link: string;      // camp link
   description?: string;
